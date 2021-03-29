@@ -86,9 +86,30 @@ export default function MakeTable({ columns, data, loading }) {
         .fill(undefined)
         .map((el, i) => (i + 1) * 10);
     } else {
-      return getDropDownOptionsFromRows(50).concat(100).concat("All");
+      return getDropDownOptionsFromRows(50);
     }
   }
+
+  // const getArrayWithDivisor = (num, div) => {
+  //   return Array(Math.floor(num / div))
+  //     .fill(undefined)
+  //     .map((el, i) => (i + 1) * div);
+  // };
+
+  // const getInitDiv = (num, x = 10) => {
+  //   return num < x ? x : getInitDiv(num, x * 10);
+  // };
+
+  // const _getDropDownOptionsFromRows = (num, initDiv) =>
+  //   initDiv >= 10
+  //     ? _getDropDownOptionsFromRows(
+  //         initDiv / 2 > num ? num : initDiv / 2,
+  //         initDiv / 10
+  //       ).concat(getArrayWithDivisor(num, initDiv))
+  //     : [];
+
+  // const getDropDownOptionsFromRows = (num) =>
+  //   _getDropDownOptionsFromRows(num, getInitDiv(num));
 
   const handleFilterChange = (e) => {
     const value = e.target.value || "";
@@ -234,11 +255,7 @@ export default function MakeTable({ columns, data, loading }) {
             }}
           >
             {getDropDownOptionsFromRows(data.length).map((pageSize) => (
-              <MenuItem
-                value={pageSize === "All" ? data.length : pageSize}
-                id={pageSize}
-                key={pageSize}
-              >
+              <MenuItem value={pageSize} id={pageSize} key={pageSize}>
                 Show {pageSize}
               </MenuItem>
             ))}
