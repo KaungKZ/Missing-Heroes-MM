@@ -21,8 +21,11 @@ const FooterStyles = styled.div`
     font-weight: 500;
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 480px) {
     font-size: 14px;
+  }
+
+  @media (max-width: 320px) {
   }
 `;
 

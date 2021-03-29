@@ -39,7 +39,6 @@ export default function AllHeroesTable({ setHeroesAmount }) {
 
     return () => window.removeEventListener("resize", handleScreenResize);
   }, []);
-  // http://localhost:8080/fetchData
 
   useEffect(() => {
     fetch("/api/fetchData", {
@@ -49,8 +48,6 @@ export default function AllHeroesTable({ setHeroesAmount }) {
       },
     })
       .then((res) => {
-        // console.log(res);
-        console.log("yes");
         if (res.status !== 200) {
           setLoading({
             show: true,
@@ -65,7 +62,6 @@ export default function AllHeroesTable({ setHeroesAmount }) {
       })
 
       .then((res) => {
-        console.log(res);
         setPersonDetails(res.data.heroes);
         setHeroesAmount(res.data.heroes.length);
         setLoading({
@@ -81,12 +77,6 @@ export default function AllHeroesTable({ setHeroesAmount }) {
         });
       });
   }, []);
-
-  // useEffect(() => {
-  //   axios
-  //     .get("https://missingheroesmm.herokuapp.com/api/test")
-  //     .then((res) => console.log(res));
-  // }, []);
 
   useEffect(() => {
     setOriData(MakeData(personDetails));
