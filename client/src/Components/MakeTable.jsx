@@ -121,7 +121,7 @@ export default function MakeTable({ columns, data, loading }) {
         <InputFormWrapper
           noValidate
           onSubmit={handleOnSubmitInput}
-          // autoComplete="off"
+          autoComplete="off"
         >
           <InputFilterStyles
             InputProps={{
