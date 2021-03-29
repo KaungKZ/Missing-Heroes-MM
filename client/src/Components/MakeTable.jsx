@@ -234,7 +234,11 @@ export default function MakeTable({ columns, data, loading }) {
             }}
           >
             {getDropDownOptionsFromRows(data.length).map((pageSize) => (
-              <MenuItem value={pageSize} id={pageSize} key={pageSize}>
+              <MenuItem
+                value={pageSize === "All" ? data.length : pageSize}
+                id={pageSize}
+                key={pageSize}
+              >
                 Show {pageSize}
               </MenuItem>
             ))}
