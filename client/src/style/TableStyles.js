@@ -122,11 +122,11 @@ export const InputFilterStyles = styled(TextField)`
   @media (max-width: 600px) {
     & label.Mui-focused {
       color: var(--general-blue-color);
-      transform: translate(16px, -6px) scale(0.75);
+      transform: translate(16px, -4.5px) scale(0.75);
     }
 
     .MuiInputLabel-outlined.MuiInputLabel-shrink {
-      transform: translate(16px, -6px) scale(0.75);
+      transform: translate(16px, -4.5px) scale(0.75);
     }
     & .MuiInputLabel-root {
       font-size: 14px;
@@ -152,11 +152,11 @@ export const InputFilterStyles = styled(TextField)`
     }
 
     & label.Mui-focused {
-      transform: translate(17px, -6px) scale(0.75);
+      transform: translate(17px, -5px) scale(0.75);
     }
 
     .MuiInputLabel-outlined.MuiInputLabel-shrink {
-      transform: translate(17px, -6px) scale(0.75);
+      transform: translate(17px, -5px) scale(0.75);
     }
   }
 
@@ -177,11 +177,11 @@ export const InputFilterStyles = styled(TextField)`
     }
 
     & label.Mui-focused {
-      transform: translate(19px, -5px) scale(0.85);
+      transform: translate(19px, -6px) scale(0.85);
     }
 
     .MuiInputLabel-outlined.MuiInputLabel-shrink {
-      transform: translate(19px, -5px) scale(0.85);
+      transform: translate(19px, -6px) scale(0.85);
     }
   }
 `;
