@@ -60,7 +60,7 @@ export const InputWrapper = styled.div`
       }
 
       .MuiInputLabel-outlined.MuiInputLabel-shrink {
-        /* background: #fff; */
+        background: #fff;
       }
     }
   }
@@ -69,16 +69,11 @@ export const InputWrapper = styled.div`
 export const InputFilterStyles = styled(TextField)`
   width: 100%;
   background: #fff;
-  /* border-color: var(--general-blue-color) !important; */
 
   & label.Mui-focused {
     color: var(--general-blue-color);
     transform: translate(11px, -6px) scale(0.75);
   }
-
-  /* & .muifilledinput-root {
-    background: #fff !important;
-  } */
 
   .MuiInputLabel-outlined.MuiInputLabel-shrink {
     transform: translate(11px, -6px) scale(0.75);
