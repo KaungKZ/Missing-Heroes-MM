@@ -120,6 +120,14 @@ export const InputFilterStyles = styled(TextField)`
   }
 
   @media (max-width: 600px) {
+    & label.Mui-focused {
+      color: var(--general-blue-color);
+      transform: translate(16px, -6px) scale(0.75);
+    }
+
+    .MuiInputLabel-outlined.MuiInputLabel-shrink {
+      transform: translate(16px, -6px) scale(0.75);
+    }
     & .MuiInputLabel-root {
       font-size: 14px;
     }
